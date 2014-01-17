@@ -664,7 +664,7 @@ gboolean key_press_cb(VteTerminal *vte, GdkEventKey *event, keybind_info *info) 
                 move(vte, &info->select, -1, 0);
                 break;
             case GDK_KEY_Down:
-            case GDK_KEY_j:
+            case GDK_KEY_n:
                 move(vte, &info->select, 0, 1);
                 break;
             case GDK_KEY_Up:
@@ -718,11 +718,11 @@ gboolean key_press_cb(VteTerminal *vte, GdkEventKey *event, keybind_info *info) 
             case GDK_KEY_question:
                 overlay_show(&info->panel, overlay_mode::rsearch, vte);
                 break;
-            case GDK_KEY_n:
+            case GDK_KEY_j:
                 vte_terminal_search_find_next(vte);
                 vte_terminal_copy_primary(vte);
                 break;
-            case GDK_KEY_N:
+            case GDK_KEY_J:
                 vte_terminal_search_find_previous(vte);
                 vte_terminal_copy_primary(vte);
                 break;
