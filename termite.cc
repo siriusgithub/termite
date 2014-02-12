@@ -1283,7 +1283,7 @@ static void exit_with_success(VteTerminal *) {
 
 int main(int argc, char **argv) {
     GError *error = nullptr;
-    const char *const term = "xterm-termite";
+    const char *const term = "xterm-256color";
     char *directory = nullptr;
     gboolean version = FALSE, hold = FALSE;
 
